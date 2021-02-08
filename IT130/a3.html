@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Assignment 3</title>
+        <link rel="stylesheet" href="a3_stylesheet.css">
+    </head>
+    
+    <body>
+        <div>
+        <h1>Sandcastle's Sandwiches!</h1>
+        <img src="sandwich.jpg">
+        <form id="orderMenu">
+            <p>
+                <p><label for="txtCustomerName">Enter name: </label>
+                    <input type="text" id="txtCustomerName">
+
+                <p><label for="txtZipCode">Enter zip code: </label>
+                    <input type="text" id="txtZipCode">
+
+                <p><label for="selSandwichType">Select the type of sandwich:</label>
+                    <select id="selSandwichType">
+                        <option value="rb">Roast Beef</option>
+                        <option value="veg">Veggie</option>
+                        <option value="med">Mediteranean</option>
+                        <option value="ital">Italian</option>
+                    </select>
+            
+                <p><label>Please pick the size of your sandwich</label><br>
+                    <label for="radSizeSmall">Small ($7.00)</label>
+                    <input type="radio" id="radSizeSmall" name="sandwichSize"><br>
+                    <label for="radSizeMedium">Medium ($8.50)</label>
+                    <input type="radio" id="radSizeMedium" name="sandwichSize"><br>
+                    <label for="radSizeLarge">Large ($10.00)</label>
+                    <input type="radio" id="radSizeLarge" name="sandwichSize"><br>
+                    
+                <p><label>Condiments?</label><br>
+                    <label for="chkMustard">Mustard</label>
+                    <input type="checkbox" id="chkMustard">
+                    <label for="chkPickle">Pickle</label>
+                    <input type="checkbox" id="chkPickle">
+                    <label for="chkLettuce">Lettuce</label>
+                    <input type="checkbox" id="chkLettuce">
+                    <label for="chkOlives" >Olives</label>
+                    <input type="checkbox" id="chkOlives">
+                    
+                <p><label>Special request?</label><br>
+                    <textarea id="txtarSpecialRequest" col="10" rows="5"></textarea>
+                    
+                <p><label for="chkMailingList">Would you like to be added to our mailinh list?</label>
+                    <input type="checkbox" id="chkMailingList" checked="checked">Yes
+                    
+                <p><input type="button" id="btnSubmit" value="Make My Sandwich">
+            </p>
+        </form>
+        </div>
+    </body>
+</html>
+
+<!--  
+I am not sure why ".html.zip" would make sense in the first place, but to explain why it would not make sense in my terms would be a file name is like an email address. You can name it anything you would like before the punctuation, but you should not edit the part after the punctuation becuase it is a set value. For example, I have a school email with "@depaul.edu" and it is a microsoft address. Of course it would not work if you try log in on Gmail using "@depaul.edu@gmail.com" because it is just not the right platform and typing "@depaul.edu@gmail.com" would not create a platform for it. So, same with file names. ".html" and ".zip" are meant for different type of operations, so stacking them in the file names does not make any sense.
+-->

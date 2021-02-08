@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment 6</title>
+        <link rel=stylesheet href="a6_stylesheet.css">
+    </head>
+    <body>
+        <header>
+            <h1 class = "format-main-heading">Age Calculator</h1>
+        </header>
+        <main>
+            <form id="Calculator">
+                <p><label for="txtName">Name:</label>
+                <input type="text" id="txtName"></p>
+                <p><label for="txtColor">Favorite Color:</label>
+                <input type="text" id="txtColor"></p>
+                <p><label for="txtMonthBorn">Month Born:</label>
+                <input type="text" id="txtMonthBorn"></p>
+                <input type="button" id="btnSummarize" value="Summarize" onclick="concatInfo();">
+                <div id="output_string">
+                </div>
+                <p><label for="txtAge">Enter your age:</label>
+                <input type="text" id="txtAge"></p>
+                <input type="button" id="btnAgeIn2050"
+                         value="How old will I be in 2050" onclick="ageIn2050();">
+                <div id="age_2050">
+                </div>
+            </form>
+        </main>
+        <script>
+            function concatInfo(){
+                var name,color,month;                                               //Establising variables for input vals
+                var greeting,favColor,monthBorn,sentence;                           //Establishing variables for sentence fragments
+                name = document.getElementById("txtName").value;                    //Get name from user
+                color = document.getElementById("txtColor").value;                  //Get color from user
+                month = document.getElementById("txtMonthBorn").value;              //Get month from user
+                greeting = "Hello, "+name+". ";                                     //Creating first sentence
+                favColor = "Your favorite color is "+color+". ";                    //Creating sencond sentence
+                monthBorn = "You were born in "+month+".";                          //Creating third sentence
+                sentence = greeting+favColor+monthBorn;                             //Combining all three sentences into a sentence.
+                document.getElementById("output_string").innerHTML = sentence;      //Output to <div> using innerHTML
+            }
+            function ageIn2050(){
+                var age, newAge;
+                var sentence;
+                age = document.getElementById("txtAge").value;
+                age = parseFloat(age);
+                newAge = age+30;
+                sentence = "You are currently "+age+". "
+                    +"In 2050 you will be "+newAge+". ";
+                document.getElementById("age_2050").innerHTML = sentence;
+            }
+        </script>
+    </body>
+</html>
+
+<!--We need to parse the age in the second problem because we need to do mathematical operation on 'age' by adding 30. 
+If we don't, it will add 30, as a string, at the end of whatever the user typed in the age box.--> 

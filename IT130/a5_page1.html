@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment #5 page 1</title>
+    </head>
+    <body>
+        <h1>Convert to Grams</h1>
+        <form id="gramConversion">
+            <label for="txtOunces">Enter Ounces:</label>
+            <input type="text" id="txtOunces">
+            <label for="btnConvert"></label>
+            <input type="button" id="btnConvert" value="Convert to grams" onclick=convertToGram();>
+        </form>
+        <div id="resultOutput" style="font-family:Candara">
+        </div>
+        <script>
+            function convertToGram(){
+                var oz = document.getElementById("txtOunces").value;
+                var grams;
+                grams = oz*28.3;
+                document.getElementById("resultOutput").innerHTML = grams;
+            }
+        </script>
+    </body>
+</html>

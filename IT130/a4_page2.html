@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset= "utf-8">
+        <title>Assignment #4 page 2</title>
+    </head>
+    <body>
+        <header>
+            <h1>Random number generator (between 0 and 1)</h1>
+            <img src="rollingDie.gif" width="200" height="200">
+        </header>
+        <main>
+            <form id="randNum">
+                <label for ="pickANum">Get your number</label>
+                <input type="button" id="pickANum" value="?" onclick = getNum();>
+            </form>
+        </main>
+        <script>
+            function getNum(){
+                alert(Math.random());
+            }
+        </script>
+    </body>
+</html>

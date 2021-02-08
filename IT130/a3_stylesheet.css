@@ -1,0 +1,15 @@
+h1{
+    border: 3px; 
+    border-style: inset;
+    color:#F22B01;
+}
+
+img{
+    width: 75%;
+    border: 5px;
+    border-style: dotted;
+}
+
+div{
+    width: 325px;
+}

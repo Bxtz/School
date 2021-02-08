@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment 7</title>
+        <link rel=stylesheet href="a7_stylesheet.css">
+    </head>
+    <body>
+        <header>
+            <h1 class="format-text">Circle Calculator</h1>
+        </header>
+        <main class="format-text">
+            <form id="Calculator">
+                <label for="txtRadius">Enter radius:</label>
+                <input type="text" id="txtRadius">
+                <input type="button" id="btnCalculate" value="Calculate" onclick="calculate();">
+                <div id="circSize"></div>
+                <div id="radius"></div>
+                <div id="diameter"></div>
+                <div id="area"></div>
+                <div id="circumference"></div>
+            </form>
+        </main>
+        <script>
+            function calculate(){
+                var radius, diameter, area, circumference;
+                var circle_statement, diameter_statement, area_statement, circumference_statement, radius_statement;
+                
+                radius = document.getElementById("txtRadius").value;
+                diameter = radius*2;
+                diameter = diameter.toFixed(1);
+                area = Math.PI*Math.pow(radius,2);
+                area = area.toFixed(1);
+                circumference = 2*Math.PI*radius;
+                circumference = circumference.toFixed(1);
+                
+                if(area>20){
+                    circle_statement = "<p>This is a big circle.</p>";
+                }
+                else{
+                    circle_statement = "<p>This is not a big circle.</p>";
+                }
+                
+                radius_statement = "Radius: "+radius;
+                diameter_statement = "Diameter: "+diameter;
+                area_statement = "Area: "+area;
+                circumference_statement = "Circumference: "+circumference;
+                
+                document.getElementById("circSize").innerHTML= circle_statement;
+                document.getElementById("radius").innerHTML = radius_statement;
+                document.getElementById("diameter").innerHTML = diameter_statement;
+                document.getElementById("area").innerHTML = area_statement;
+                document.getElementById("circumference").innerHTML = circumference_statement;
+            }
+        </script>
+    </body>
+</html>

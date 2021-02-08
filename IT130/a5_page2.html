@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment #5 page 2</title>
+        <link rel=stylesheet href="a5_stylesheet.css">
+    </head>
+    <body>
+        <header class="header-class">
+            <h1>Air volume calculator</h1>
+            <img src="sea_turtle.jpg" alt="an image of a sea turtle" width="300">
+        </header>
+        <main class="main-class">
+            <form id="airVolumeCalculation">
+                <label for="txtPsi">Enter pressure: </label>
+                <input type="text" id="txtPsi"> psi
+                <p><label for="btnCalculate"></label></p>
+                <input type="button" id="btnCalculate" value="Calcute air volume" onclick=airVolume();>
+            </form>
+        </main>
+        <div id="airVolume">
+        </div>
+        <script>
+            function airVolume(){
+                var psi = document.getElementById("txtPsi").value;
+                var airV;
+                airV = psi/3000*80;
+                document.getElementById("airVolume").innerHTML = airV;
+            }
+        </script>
+    </body>
+</html>
